@@ -20,8 +20,8 @@ export default function HomePage() {
             </div>
             <nav className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
-              <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
-              <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+              <Link href="/pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Pricing</Link>
+              <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About</Link>
             </nav>
             <div className="flex items-center gap-3">
               <Link href="/auth/login">
