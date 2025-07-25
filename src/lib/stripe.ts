@@ -60,8 +60,8 @@ export const subscriptionTiers: SubscriptionTier[] = [
     description: 'Ideal for serious learners',
     priceMonthly: 1999, // $19.99
     priceYearly: 19999, // $199.99 (save ~17%)
-    stripePriceIdMonthly: 'price_premium_monthly',
-    stripePriceIdYearly: 'price_premium_yearly',
+    stripePriceIdMonthly: 'price_1RopUkA9v7MQ0ClCEv3cX1dh',
+    stripePriceIdYearly: 'price_1RopUsA9v7MQ0ClCzM1B8Lmk',
     features: [
       'Unlimited questions',
       '2 hours AI tutoring daily',
@@ -86,8 +86,8 @@ export const subscriptionTiers: SubscriptionTier[] = [
     description: 'For power users and exam prep',
     priceMonthly: 3999, // $39.99
     priceYearly: 39999, // $399.99 (save ~17%)
-    stripePriceIdMonthly: 'price_pro_monthly',
-    stripePriceIdYearly: 'price_pro_yearly',
+    stripePriceIdMonthly: 'price_1RopV2A9v7MQ0ClCcEISdvLp',
+    stripePriceIdYearly: 'price_1RopVAA9v7MQ0ClCUeIJ0nds',
     features: [
       'Everything in Premium',
       'Unlimited AI tutoring',
