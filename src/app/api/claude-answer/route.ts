@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     // Check daily question limit
     const { data: userData, error: userError } = await supabase
       .from('users')
-      .select('questions_used_today, questions_limit, subscription_tier')
+      .select('questions_used_today, questions_limit, subscription_tier, total_questions_asked')
       .eq('id', userId)
       .single();
 
@@ -297,7 +297,7 @@ async function generateClaudeResponse(prompt: string, options: {
 }
 
 function analyzeResponse(content: string, subject?: string) {
-  const hasLatex = /\$.*?\$|\$\$.*?\$\$/s.test(content);
+  const hasLatex = /\$.*?\$|\$\$.*?\$\$/g.test(content);
   const hasCode = /```[\s\S]*?```/.test(content);
   const hasDiagrams = /diagram|graph|chart|figure/i.test(content);
   
@@ -379,7 +379,7 @@ function generateTags(content: string, subject?: string): string[] {
   
   tags.push(...topWords);
   
-  return [...new Set(tags)];
+  return Array.from(new Set(tags));
 }
 
 async function getSubjectId(subjectName?: string): Promise<string | null> {
